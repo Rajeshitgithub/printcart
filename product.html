@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- -------style------- -->
+    <link rel="stylesheet" href="asset/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- --------swiper js-------- -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>Printing cart</title>
+  </head>
+  <body>
+    <!-- ----------top header start here------- -->
+     <section class="top-section alert alert-warning alert-dismissible fade show" role="alert" >
+      <div class="container-fluid " >
+        <div class="row d-flex align-items-center bs-gutter-0">
+          <div class="col-lg-8 offset-lg-2  ">
+            <div class="swiper mySwiper ">
+              <div class="swiper-wrapper ">
+                <div class="swiper-slide">
+                  <p>Sale 50% Off — Auto Applied at Checkout — Limited Time Only</p>
+                </div>
+                <div class="swiper-slide">
+                  <p>Limited Time Offer: Get 50% Off Your Purchase - Hurry, Sale Ends Soon!</p>
+                </div>
+                <div class="swiper-slide">
+                  <p>Don't Miss Out on Our Massive Sale: Enjoy 50% Off - Auto Applied at Checkout!</p>
+                </div>
+                
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              
+            </div>
+          </div>
+          <div class="col-2">
+            <button type="button" class="btn-close " data-bs-dismiss="alert" aria-label="Close" id="close-button"></button>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+    </section> 
+    <!-- ----------top header end here------- -->
+
+       <!-- --------------header section start------------- -->
+       <header id="header">
+        <div class="container-1 py-2 d-flex align-items-center">
+          <strong class="logo"><img src="asset/images/logo.webp" alt="" class="img-fluid"></strong>
+          <!-- <label class="open-search" for="open-search">
+            <input class="input-open-search" id="open-search" type="checkbox" name="menu" />
+            <div class="search">
+              <button class="button-search"> Search</button>
+              <i class="fas fa-search">Search</i>
+              <input type="text" placeholder="What are you looking for?" class="input-search" />
+            </div>
+          </label> -->
+          <div class="contenir">
+  
+            <input type="text" class="search" id="search-inp" placeholder="Search...">
+        
+            <button class="search-btn"  id="search-inp-btn">Search </button>
+        
+        </div>
+        
+        
+          <nav class="nav-content pt-3">
+            <ul class="nav-content-list d-flex justify-content-around">
+              <li class="nav-content-item account-login">
+                <label class="open-menu-login-account" for="open-menu-login-account">
+                  <input class="input-menu" id="open-menu-login-account" type="checkbox" name="menu" />
+                  <i class="fas fa-user-circle fs-4"></i>
+                  <ul class="login-list">
+                    <li class="login-list-item"><a href="login-page.html">My account</a></li>
+                    <li class="login-list-item"><a href="signup.html">Create account</a></li>
+                    <li class="login-list-item"><a href="#">logout</a></li>
+                </label>
+            </ul>
+            </li>
+            <li class="nav-content-item heart-icon"><a class="nav-content-link" href="#"><i class="fa-solid fa-heart text-dark fs-4"></i></a></li>
+            <li class="nav-content-item"><a class="nav-content-link" href="#">
+              <button class="btn cart-class p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <!-- <button type="button" class="btn shadow-none position-relative"> -->
+                  <i class="fa-solid fa-cart-shopping text-dark position-relative fs-4"></i>
+                  <span class="position-absolute top-0 start-75 translate-middle-x badge rounded-2 bg-danger">
+                    99+
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+              </button>
+  
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 id="offcanvasRightLabel"><i class="fa-solid fa-cart-shopping text-dark"></i></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Cart Container -->
+    <div class="container">
+      <div class="row">
+        <!-- Cart Items -->
+        <div class="col-12">
+          <!-- Item 1 -->
+          <div class="cart-item d-flex align-items-center">
+            <img src="https://via.placeholder.com/80" alt="Product Image">
+            <div>
+              <h5 class="cart-item-title">Product Name 1</h5>
+              <p class="text-muted">Quantity: 2</p>
+              <p class="text-muted">Price: $25.00</p>
+            </div>
+            <div class="ms-auto">
+              <button class="btn btn-danger btn-sm">Remove</button>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="cart-item d-flex align-items-center">
+            <img src="https://via.placeholder.com/80" alt="Product Image">
+            <div>
+              <h5 class="cart-item-title">Product Name 2</h5>
+              <p class="text-muted">Quantity: 1</p>
+              <p class="text-muted">Price: $50.00</p>
+            </div>
+            <div class="ms-auto">
+              <button class="btn btn-danger btn-sm">Remove</button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Cart Summary -->
+        <div class="col-12">
+          <div class="bg-light p-4 rounded">
+            <h5>Order Summary</h5>
+            <hr>
+            <p class="text-dark">Subtotal: <span class="float-end text-dark fs-6 fw-6">$100.00</span></p>
+            <p>Shipping: <span class="float-end text-dark fs-6 fw-6">$5.00</span></p>
+            <p class="cart-total">Total: <span class="float-end text-dark fs-6 fw-6">$105.00</span></p>
+            <hr>
+            <button class="btn btn-custom btn-block w-100">Proceed to Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+            </a></li>
+            
+            </ul>
+          </nav>
+        </div>
+  
+  
+        <div class="container-fluid ">
+          
+          <div class="hrr">
+            <hr>
+          </div>
+          <div class="row d-flex align-items-center sec-row py-lg-2">
+            <div class="col-lg-3 col-menu ">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="menu ms-5 d-flex align-items-center">
+                  <i class="fa-solid fa-bars me-3 fs-4" ></i>
+                  <span class="text-dark fs-6 fw-bold">All Department</span>
+                </div>
+                <div class="dropdown  ms-5" id="dropdown">
+                  <button class="btn shadow-none dropdown-toggle primary-menu-button" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  </button>
+                  <ul class="dropdown-menu primary-menu" aria-labelledby="dropdownMenuButton">
+                    <!-- Dropdown inside dropdown (submenu) -->
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item " href="#">
+                          <div class="d-flex justify-content-between align-items-center">
+                              <div class="drop-img d-flex align-items-center">
+                                  <img src="asset/images/list/11.webp" alt="" class="img-fluid">
+                                  <p>Stationary Item</p>
+                              </div>
+                              <div class="drop-icon">
+                                  <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                          </div>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Pen</a></li>
+                            <li><a class="dropdown-item" href="#">Mouse Pad</a></li>
+                            <li><a class="dropdown-item" href="#">Notepad</a></li>
+                            <li><a class="dropdown-item" href="#">Letterhead</a></li>
+                            <li><a class="dropdown-item" href="#">Business Card</a></li>
+                            <li><a class="dropdown-item" href="#">Stamp</a></li>
+                            <li><a class="dropdown-item" href="#">Dairy</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item " href="#">
+                          <div class="d-flex justify-content-between align-items-center">
+                              <div class="drop-img d-flex align-items-center">
+                                  <img src="asset/images/list/sing.webp" alt="" class="img-fluid">
+                                  <p>Signages</p>
+                              </div>
+                              <div class="drop-icon">
+                                  <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                          </div>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Standee</a></li>
+                        <li><a class="dropdown-item" href="#">Stickers</a></li>
+                        <li><a class="dropdown-item" href="#">Sun Board</a></li>
+                        <li><a class="dropdown-item" href="#">Name Plates</a></li>
+                        <li><a class="dropdown-item" href="#">Posters</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item " href="#">
+                          <div class="d-flex justify-content-between align-items-center">
+                              <div class="drop-img d-flex align-items-center">
+                                  <img src="asset/images/list/drinkwear.webp" alt="" class="img-fluid">
+                                  <p> Drinkware</p>
+                              </div>
+                              <div class="drop-icon">
+                                  <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                          </div>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Bottle</a></li>
+                        <li><a class="dropdown-item" href="#">Tea Mugs</a></li>
+                        <li><a class="dropdown-item" href="#">Coffee Mugs</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item " href="#">
+                          <div class="d-flex justify-content-between align-items-center">
+                              <div class="drop-img d-flex align-items-center">
+                                  <img src="asset/images/list/appearl.webp" alt="" class="img-fluid">
+                                  <p>Apparel</p>
+                              </div>
+                              <div class="drop-icon">
+                                  <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                          </div>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Customized Tshirt</a></li>
+                        <li><a class="dropdown-item" href="#">Shirt</a></li>
+                        <li><a class="dropdown-item" href="#">Caps</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item " href="#">
+                          <div class="d-flex justify-content-between align-items-center">
+                              <div class="drop-img d-flex align-items-center">
+                                  <img src="asset/images/list/customized.webp" alt="" class="img-fluid">
+                                  <p> Customized Gift</p>
+                              </div>
+                              <div class="drop-icon">
+                                  <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                          </div>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Key</a></li>
+                        <li><a class="dropdown-item" href="#">Other Gifts</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item " href="#">
+                          <div class="d-flex justify-content-between align-items-center">
+                              <div class="drop-img d-flex align-items-center">
+                                  <img src=" asset/images/list/label.webp" alt="" class="img-fluid">
+                                  <p> Labels</p>
+                              </div>
+                              <div class="drop-icon">
+                                  <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                          </div>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Pen</a></li>
+                            <li><a class="dropdown-item" href="#">Mouse Pad</a></li>
+                            <li><a class="dropdown-item" href="#">Notepad</a></li>
+                            <li><a class="dropdown-item" href="#">Letterhead</a></li>
+                            <li><a class="dropdown-item" href="#">Business Card</a></li>
+                            <li><a class="dropdown-item" href="#">Stamp</a></li>
+                            <li><a class="dropdown-item" href="#">Dairy</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item " href="#">
+                          <div class="d-flex justify-content-between align-items-center">
+                              <div class="drop-img d-flex align-items-center">
+                                  <img src="asset/images/list/photo-9.gif" alt="" class="img-fluid">
+                                  <p> Same Day Delivery</p>
+                              </div>
+                              <div class="drop-icon">
+                                  <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                          </div>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Pen</a></li>
+                            <li><a class="dropdown-item" href="#">Mouse Pad</a></li>
+                            <li><a class="dropdown-item" href="#">Notepad</a></li>
+                            <li><a class="dropdown-item" href="#">Letterhead</a></li>
+                            <li><a class="dropdown-item" href="#">Business Card</a></li>
+                            <li><a class="dropdown-item" href="#">Stamp</a></li>
+                            <li><a class="dropdown-item" href="#">Dairy</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item " href="#">
+                          <div class="d-flex justify-content-between align-items-center">
+                              <div class="drop-img d-flex align-items-center">
+                                  <img src="asset/images/list/packaging.webp" alt="" class="img-fluid">
+                                  <p>Packaging</p>
+                              </div>
+                              <div class="drop-icon">
+                                  <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                          </div>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Pen</a></li>
+                            <li><a class="dropdown-item" href="#">Mouse Pad</a></li>
+                            <li><a class="dropdown-item" href="#">Notepad</a></li>
+                            <li><a class="dropdown-item" href="#">Letterhead</a></li>
+                            <li><a class="dropdown-item" href="#">Business Card</a></li>
+                            <li><a class="dropdown-item" href="#">Stamp</a></li>
+                            <li><a class="dropdown-item" href="#">Dairy</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+            </div>
+            
+           
+            <div class="col-lg-9">
+              <ul class="header-navbar me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown shop   shop-drop">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    shop
+                  </a>
+                  <div class="dropdown-menu row" aria-labelledby="navbarDropdown">
+                    <div class="col-lg-3">
+                      <div class="card">
+                        <div class="card-img">
+                            <img src="asset/images/product/cloth-product-2.webp" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-button">
+                            <button>Business Card</button>
+                        </div>
+                    </div>
+                    </div>
+  
+                    <div class="col-lg-3">
+                      <div class="card">
+                        <div class="card-img">
+                            <img src="asset/images/product/cloth-product-1.webp" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-button">
+                            <button>Business Card</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="card">
+                        <div class="card-img">
+                            <img src="asset/images/product/selling-item-card-1.webp" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-button">
+                            <button>Business Card</button>
+                        </div>
+                    </div>
+                    </div>
+  
+                    
+  
+                    <div class="col-lg-3">
+                      <div class="card">
+                        <div class="card-img">
+                            <img src="asset/images/product/mousepads.webp" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-button">
+                            <button>Business Card</button>
+                        </div>
+                    </div>
+                    </div>
+  
+                  </div>
+                </li>
+                <li class="nav-item dropdown header-drop">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Services
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item mb-2" href="#">Printing cloths </a></li>
+                    <li><a class="dropdown-item mb-2" href="#">Banner Printing</a></li>
+                    <li><a class="dropdown-item mb-2" href="#">Stationary Item</a></li>
+                    
+  
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="product.html" >Blog</a>
+                </li>
+                <li class="nav-item dropdown header-drop">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   pages
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item mb-2" href="about.html">About us</a></li>
+                    <li><a class="dropdown-item mb-2" href="store.html">Our Stores</a></li>
+                    <li><a class="dropdown-item mb-2" href="faq.html">FAQ</a></li>
+                    <li><a class="dropdown-item mb-2" href="contact.html">Contact us</a></li>
+                    <li><a class="dropdown-item" href="location.html">Location</a></li>
+  
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+       </header>
+  
+  
+       <!-- ===================header for mobile screen======================== -->
+        <section class="mob-header py-md-2 py-sm-2 py-2">
+          <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 col-sm-3 col-3">
+                  <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <i class="fa-solid fa-bars"></i>
+                  </button>
+                  
+                  <div class=" offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header bg-danger ">
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Menu</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+                        </li>
+                        
+                      </ul>
+                      
+                      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                          <ul class="navbar-nav">
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Product </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Blog </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Pages </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Recently Viewed</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Wishlist
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Login 
+                                / Register
+                              </a>
+                            </li>
+                            
+                          </ul>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                          <ul class="navbar-nav-banner ms-0 ps-0 mb-2 mb-lg-0 d-flex flex-column " >
+                            <li class="nav-item dropdown d-flex justify-content-between" >
+                              <a class="nav-link" href="#" >
+                                <img src="asset/images/list/11.webp" alt="" class="img-fluid">
+                                Stationery
+                              </a>
+                              <a href="#" class="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-angle-right pe-2 pt-3"></i>
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Pen</a></li>
+                                <li><a class="dropdown-item" href="#">Mouse Pad</a></li>
+                                <li><a class="dropdown-item" href="#">Notepad</a></li>
+                                <li><a class="dropdown-item" href="#">Letterhead</a></li>
+                                <li><a class="dropdown-item" href="#">Business Card</a></li>
+                                <li><a class="dropdown-item" href="#">Stamp</a></li>
+                                <li><a class="dropdown-item" href="#">Dairy</a></li>
+                               
+                              </ul>
+                            </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="nav-item dropdown d-flex justify-content-between">
+                          <a class="nav-link" href="#" >
+                            <img src="asset/images/list/sing.webp" alt="" class="img-fluid">
+                            Signages
+                          </a>
+                          <a href="#" class="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-angle-right pe-2 pt-3"></i>
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Standee</a></li>
+                            <li><a class="dropdown-item" href="#">Stickers</a></li>
+                            <li><a class="dropdown-item" href="#">Sun Board</a></li>
+                            <li><a class="dropdown-item" href="#">Name Plates</a></li>
+                            <li><a class="dropdown-item" href="#">Posters</a></li>
+                           
+                           
+                          </ul>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="nav-item dropdown d-flex justify-content-between">
+                          <a class="nav-link" href="#" >
+                            <img src="asset/images/list/drinkwear.webp" alt="" class="img-fluid">
+                            Drinkware
+                          </a>
+                          <a href="#" class="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-angle-right pe-2 pt-3"></i>
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Bottle</a></li>
+                            <li><a class="dropdown-item" href="#">Tea Mugs</a></li>
+                            <li><a class="dropdown-item" href="#">Coffee Mugs</a></li>
+                          </ul>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="nav-item dropdown d-flex justify-content-between">
+                          <a class="nav-link" href="#" >
+                            <img src="asset/images/list/appearl.webp" alt="" class="img-fluid">
+                            Apparel
+                          </a>
+                          <a href="#" class="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-angle-right pe-2 pt-3"></i>
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Customized Tshirt</a></li>
+                            <li><a class="dropdown-item" href="#">Shirt</a></li>
+                            <li><a class="dropdown-item" href="#">Caps</a></li>
+                           
+                            
+                          </ul>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="nav-item dropdown d-flex justify-content-between">
+                          <a class="nav-link" href="#" >
+                            <img src="asset/images/list/customized.webp" alt="" class="img-fluid">
+                            Customized Gift
+                          </a>
+                          <a href="#" class="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-angle-right pe-2 pt-3"></i>
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Key</a></li>
+                            <li><a class="dropdown-item" href="#">Other Gifts</a></li>
+                            
+                          </ul>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="nav-item dropdown d-flex justify-content-between">
+                          <a class="nav-link" href="#" >
+                            <img src="asset/images/list/label.webp" alt="" class="img-fluid">
+                            Labels
+                          </a>
+                          <a href="#" class="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-angle-right pe-2 pt-3"></i>
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="nav-item dropdown d-flex justify-content-between">
+                          <a class="nav-link" href="#" >
+                            <img src="asset/images/list/packaging.webp" alt="" class="img-fluid">
+                            Packaging
+                          </a>
+                          <a href="#" class="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-angle-right pe-2 pt-3"></i>
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </li>
+                        
+                        
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="nav-item dropdown d-flex justify-content-between">
+                          <a class="nav-link" href="#" >
+                            <img src="asset/images/list/photo-9.gif" alt="" class="img-fluid">
+                            Same Day Delivery
+                          </a>
+                          <a href="#" class="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-angle-right pe-2 pt-3"></i>
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </li>
+                        
+                       
+                        
+                          </ul>
+                        </div>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+              <div class=" col-md-6 col-sm-6 col-6">
+                <img src="asset/images/logo.webp" alt="" class="img-fluid">
+              </div>
+              <div class=" col-md-3 col-sm-3 col-3 d-flex justify-content-end">
+                <ul>
+                  <li class="nav-content-item pt-3"><a class="nav-content-link" href="#"><i class="fa-solid fa-cart-shopping text-dark"></i></a></li>
+                </ul>
+              </div>
+              <div class="col-md-12 pt-2">
+                <div class="contenir">
+  
+                  <input type="text" class="search" id="search-inp" placeholder="Search...">
+              
+                  <button class="search-btn"  id="search-inp-btn">Search</button>
+              
+              </div>
+              
+              
+              </div>
+              
+              
+            </div>
+            
+          </div>
+        </section>
+  
+  
+      <!-- ===================header for mobile screen======================== -->
+
+
+    <!-- --------------header section end------------- -->
+
+
+
+    <!-- ----------------banner section satrt------------------ -->
+    <section class="product-banner">
+        <nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb ">
+            <h4 class="text-center">Products</h4>
+            <ol class="breadcrumb d-flex align-items-center justify-content-center">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Products</li>
+            </ol>
+          </nav>
+    </section>
+
+
+    <!-- ----------------banner section end------------------ -->
+
+    <!-- ===============product-item start here======================= -->
+     <section class="product-item">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="asset/images/product/product-page-1.webp" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-button">
+                            <button>Pens</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="asset/images/product/business card.webp" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-button">
+                            <button>Business Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="asset/images/product/pexels-nguyendesigner-12786599.webp" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-button">
+                            <button>Mouse Pads</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="asset/images/product/mousepads.webp" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-button">
+                            <button>Name Plate</button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+     </section>
+
+     <!-- ===============product-item end here======================= -->
+
+     <!-- ===============filter data card start here==================== -->
+     <section class="product-item py-lg-5">
+      <div class="container-fluid">
+        <div class="filter-buttons text-end">
+            <button class="btn  filter-btn" data-filter="all">All</button>
+            <button class="btn  filter-btn" data-filter="category1">Promotional Item</button>
+            <button class="btn filter-btn" data-filter="category2">Printing Item</button>
+            <button class="btn  filter-btn" data-filter="category3">Stationery </button>
+        </div>
+        <div class="row pt-3" id="card-container">
+            <div class="col-lg-3 col-md-4 mb-4 filter-item category1">
+              <div class="card">
+                <div class="card-img">
+                    <img src="asset/images/product/cloth-product-1.webp" alt="" class="img-fluid">
+                </div>
+                <div class="card-button">
+                    <button>Printing cloths</button>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mb-4 filter-item category2">
+              <div class="card">
+                <div class="card-img">
+                    <img src="asset/images/product/selling-item-card-1.webp" alt="" class="img-fluid">
+                </div>
+                <div class="card-button">
+                    <button>Printing Card</button>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mb-4 filter-item category2">
+              <div class="card">
+                <div class="card-img">
+                    <img src="asset/images/product/selling-item-card-2.webp" alt="" class="img-fluid">
+                </div>
+                <div class="card-button">
+                    <button>Printing Card</button>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mb-4 filter-item category2">
+              <div class="card">
+                <div class="card-img">
+                    <img src="asset/images/product/selling-item-card-3.webp" alt="" class="img-fluid">
+                </div>
+                <div class="card-button">
+                    <button>Printing Card</button>
+                </div>
+            </div>
+            
+            </div>
+            <div class="col-lg-3 col-md-4 mb-4 filter-item category2">
+              <div class="card">
+                <div class="card-img">
+                    <img src="asset/images/product/selling-item-card-1.webp" alt="" class="img-fluid">
+                </div>
+                <div class="card-button">
+                    <button>Printing Card</button>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mb-4 filter-item category2">
+              <div class="card">
+                <div class="card-img">
+                    <img src="asset/images/product/selling-item-card-1.webp" alt="" class="img-fluid">
+                </div>
+                <div class="card-button">
+                    <button>Printing Card</button>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mb-4 filter-item category3">
+              <div class="card">
+                <div class="card-img">
+                    <img src="asset/images/product/mousepads.webp" alt="" class="img-fluid">
+                </div>
+                <div class="card-button">
+                    <button>Name Plate</button>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mb-4 filter-item category1">
+              <div class="card">
+                <div class="card-img">
+                    <img src="asset/images/product/cloth-product-2.webp" alt="" class="img-fluid">
+                </div>
+                <div class="card-button">
+                    <button>Printing Cloths</button>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mb-4 filter-item category3">
+              <div class="card">
+                <div class="card-img">
+                    <img src="asset/images/product/stationary-item-6.webp" alt="" class="img-fluid">
+                </div>
+                <div class="card-button">
+                    <button>Name Plate</button>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mb-4 filter-item category3">
+              <div class="card">
+                <div class="card-img">
+                    <img src="asset/images/product/stationary-item-5.webp" alt="" class="img-fluid">
+                </div>
+                <div class="card-button">
+                    <button>Name Plate</button>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mb-4 filter-item category3">
+            <div class="card">
+              <div class="card-img">
+                  <img src="asset/images/product/stationary-item-4.webp" alt="" class="img-fluid">
+              </div>
+              <div class="card-button">
+                  <button>Name Plate</button>
+              </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mb-4 filter-item category3">
+          <div class="card">
+            <div class="card-img">
+                <img src="asset/images/product/stationary-item-3.webp" alt="" class="img-fluid">
+            </div>
+            <div class="card-button">
+                <button>Name Plate</button>
+            </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mb-4 filter-item category3">
+        <div class="card">
+          <div class="card-img">
+              <img src="asset/images/product/stationary-item-2.webp" alt="" class="img-fluid">
+          </div>
+          <div class="card-button">
+              <button>Name Plate</button>
+          </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4 mb-4 filter-item category3">
+      <div class="card">
+        <div class="card-img">
+            <img src="asset/images/product/stationary-item-1.webp" alt="" class="img-fluid">
+        </div>
+        <div class="card-button">
+            <button>Name Plate</button>
+        </div>
+    </div>
+    
+    </div>
+        </div>
+      </div>
+ </section>
+
+
+    <!-- ===============filter data card end here==================== -->
+
+          <!-- ================footer start here================ -->
+          <footer class="pt-lg-5">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="footer-text ms-3">
+                    <h3 class="pb-3">Contact us</h3>
+                    <p class="pb-3">If you hava a question, let's connect us</p>
+                    <p><strong>+91-8800663626</strong>, <strong>+91-8800663626</strong></p>
+                    <p class="pt-3"><Strong>Location : <span class="text-dark fs-6">Office No 4 ,Gali No 4 ,Mamura <br>Sector 66 Noida</span></Strong></p>
+                    <div class="social-icons">
+                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                  <div class="footer-text ">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-list">
+                      <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Refund Policy</a></li>
+                      <li><a href="#">Shipping & Return</a></li>
+                      <li><a href="#">Advanced Search</a></li>
+                      <li><a href="#">Term & Conditions</a></li>
+                      <li><a href="#">Shipping & Return</a></li>
+
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                  <div class="footer-text">
+                    <h3>Shop By Categories</h3>
+                    <ul class="footer-list">
+                      <li><a href="#">Stationery</a></li>
+                      <li><a href="#">Drinkware</a></li>
+                      <li><a href="#">Packaging</a></li>
+                      <li><a href="#">Same Day Delivery</a></li>
+                      <li><a href="#">Signages</a></li>
+
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-6">
+                  <div class="footer-text me-4 subs">
+                    <h3>Subscribe To Our Newsletter</h3>
+                    <p>Enter your email address to get ₹99 off your first order and free
+                      shipping. Updates information on Sales and Offers.</p>
+                      <form class="row g-2 footer-form">
+                        <div class="col-md-8">
+                          <input type="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="col-md-4">
+                          <button type="submit" class="btn btn-custom w-100">Subscribe</button>
+                        </div>
+                      </form>
+                      
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid bg-dark">
+              <div class="row py-md-2 py-sm-3 pt-sm-3 align-items-center">
+                <div class="col-lg-6 col-md-6">
+                  <div class="footer-text">
+                    <p class="text-light ">Copyright © 2024 Printing Cart.<br> All Right Reserved Designed By <a href="https://indoscie.com/"><strong>Indoscie Technology</strong>.</a></p>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 py-sm-4 pt-sm-3">
+                  <div class="footer-img d-flex justify-content-end">
+                    <img src="asset/images/payment/payment_1.webp" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+           </footer>
+           <div class="position-left">
+          <a href="#"> <i class="fa-solid fa-arrow-up fs-3"></i></a>
+           </div>
+
+
+
+
+
+
+
+
+
+    <!-- ===================footer start here=================== -->
+   
+
+    <!-- ===================footer end here=================== -->
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- ------swiper js---- -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- main.js -->
+    <script src="asset/main.js"></script>
+    <script src="asset/filter.js"></script>
+    
+  </body>
+</html>
